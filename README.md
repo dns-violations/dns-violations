@@ -1,9 +1,9 @@
 # DNS Violations
-List of DNS Violations by implementation, software and/or systems
+List of DNS violations by implementations, software and/or systems
 
 ## About
 This _List_ consists of DNS Violation Entries (_DVE_'s) that describes known
-violations to the DNS protocol by implementation, software and/or systems.
+violations to the DNS protocol by implementations, software and/or systems.
 
 ## Purpose
 The purpose of the _List_ is to better understand how wrongfully the DNS
