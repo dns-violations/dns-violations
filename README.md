@@ -43,9 +43,11 @@ strict but should at least have short and long description.
 
 <if there are any>
 
-## Submitted by
+## Metadata
 
-<may be added if the source is not a commit>
+Submitter: <may be used if the source is not a commit>
+Tags: <free form tags for the DVE as a comma seperated list>
+<meta-data>: <value>
 ```
 
 ## DVE Allocation
