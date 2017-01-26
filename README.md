@@ -52,7 +52,7 @@ Tags: <free form tags for the DVE as a comma seperated list>
 
 ## DVE Allocation
 _DVE_ are allocated sequentially starting from the number 1 using the format
-"DVE-<YEAR>-<NUMBER>".  The number is allocated on a first-come-first-served
+`DVE-<YEAR>-<NUMBER>`.  The number is allocated on a first-come-first-served
 bases via pull requests or by a maintainer for an issue.  The maintainer may
 reserve a number for an issue by updated the title of the issue with the full
 _DVE_ and also add a comment addressed to `@DNS-OARC/dve-maintainers` that it
