@@ -45,9 +45,16 @@ end of the file.
 
 <if there are any>
 
+## DNS Operator/Vendor Response
+
+<if there's any>
+
 ## Metadata
 
 Submitter: <may be used if the source is not a commit>
+Submit-Date: <date>
+Report-Date: <date> <upstream-contact>
+Fixed-Date: <date>
 Tags: <free form tags for the DVE as a comma seperated list>
 <meta-data>: <value>
 ```
