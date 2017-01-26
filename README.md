@@ -22,7 +22,9 @@ pull request or an issue.
 
 ### Format
 The format is Markdown with the following suggested headers, which are not
-strict but should at least have short and long description.
+strict but should at least have short and long description.  Metadata may be
+included at the end of headers, together under `Metadata` header or at the
+end of the file.
 
 ```
 # DVE-<YEAR>-<NUMBER>: <short description>
