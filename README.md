@@ -21,9 +21,37 @@ Anyone can submit a DNS violation and request a _DVE_, this is done as a
 pull request or an issue.
 
 ### Format
-**TODO**
+The format is Markdown with the following suggested headers, which are not
+strict but should at least have short and long description.
+
+```
+# DVE-<YEAR>-<NUMBER>: <short description>
+
+## Description
+
+<long description>
+
+## Evidence
+
+<the evidance that the violation occurred, can be shell output, tcpdump etc>
+
+## Proposed fix
+
+<how to, hopefully, fix it>
+
+## Workaround
+
+<if there are any>
+
+## Submitted by
+
+<may be added if the source is not a commit>
+```
 
 ## DVE Allocation
 _DVE_ are allocated sequentially starting from the number 1 using the format
-"DVE-<number>".
-**TODO: By whom, how**
+"DVE-<YEAR>-<NUMBER>".  The number is allocated on a first-come-first-served
+bases via pull requests or by a maintainer for an issue.  The maintainer may
+reserve a number for an issue by updated the title of the issue with the full
+_DVE_ and also add a comment addressed to `@DNS-OARC/dve-maintainers` that it
+has been reserved.  Collisions are rejected/asked to be updated.
