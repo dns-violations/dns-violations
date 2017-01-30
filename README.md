@@ -11,6 +11,12 @@ protocol is used out in the wild in order to try and make it better.
 There is also a great gain for implementers to verify that they can handle
 wrong DNS correctly.
 
+## Community based
+The _List_ is driven by the community for the community, anyone can send in
+a violation and a team of community members will review and accept or reject
+the violation, this team in called _Maintainers_.  Anyone can request to join
+the _Maintainers_ team and <acceptance method TBD>.
+
 ## Violation
 An implementation, software and/or system is considered to be in violation
 to the DNS protocol when it does not strongly conform to the current DNS
@@ -62,7 +68,8 @@ Tags: <free form tags for the DVE as a comma seperated list>
 ## DVE Allocation
 _DVE_ are allocated sequentially starting from the number 1 using the format
 `DVE-<YEAR>-<NUMBER>`.  The number is allocated on a first-come-first-served
-bases via pull requests or by a maintainer for an issue.  The maintainer may
-reserve a number for an issue by updated the title of the issue with the full
-_DVE_ and also add a comment addressed to `@DNS-OARC/dve-maintainers` that it
-has been reserved.  Collisions are rejected/asked to be updated.
+bases via pull requests or by the _Maintainers_ for an issue.  The
+_Maintainers_ may reserve a number for an issue by updated the title of the
+issue with the full _DVE_ and also add a comment addressed to
+`@DNS-OARC/dve-maintainers` that it has been reserved.  Collisions are
+rejected/asked to be updated.
