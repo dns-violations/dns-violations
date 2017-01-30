@@ -24,7 +24,8 @@ RFCs.  Violations can also include updated or obsolete DNS RFCs.
 
 ## Submission
 Anyone can submit a DNS violation and request a _DVE_, this is done as a
-pull request or an issue.
+pull request or an issue.  If submitted as a markdown file, add it under
+the year directory and will the full `DVE-YEAR-NUMBER.md` filename.
 
 ### Format
 The format is Markdown with the following suggested headers, which are not
@@ -55,6 +56,12 @@ end of the file.
 
 <if there's any>
 
+## Files
+
+<mime-type> (<optional description>): <file within DVE year directory>
+application/dns+dnstap: DVE-YEAR-NUMBER/example.dnstap
+application/dns+dnstap (segfault): DVE-YEAR-NUMBER/example_that_segfaults.dnstap
+
 ## Metadata
 
 Submitter: <may be used if the source is not a commit>
@@ -65,6 +72,11 @@ Tags: <free form tags for the DVE as a comma seperated list>
 <meta-data>: <value>
 ```
 
+### Files
+You may attach files to the _DVE_ by using the `Files` section and add the
+files in a directory related to the _DVE_ as (from repository root)
+`YEAR/DVE-YEAR-NUMBER/`.
+
 ## DVE Allocation
 _DVE_ are allocated sequentially starting from the number 1 using the format
 `DVE-<YEAR>-<NUMBER>`.  The number is allocated on a first-come-first-served
@@ -73,3 +85,9 @@ _Maintainers_ may reserve a number for an issue by updated the title of the
 issue with the full _DVE_ and also add a comment addressed to
 `@DNS-OARC/dve-maintainers` that it has been reserved.  Collisions are
 rejected/asked to be updated.
+
+## Repository Directory Layout
+- In the root of the repository there should only be documentation
+- The _DVE_ is placed under a year directory
+- The _DVE_ is in markdown format and the filename is `DVE-YEAR-NUMBER.md`
+- Optional files attached to the _DVE_ may be put under a directory with the full _DVE_ name under the year directory, example `YEAR/DVE-YEAR-NUMBER/file`
