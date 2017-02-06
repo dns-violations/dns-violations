@@ -25,7 +25,7 @@ RFCs.  Violations can also include updated or obsolete DNS RFCs.
 ## Submission
 Anyone can submit a DNS violation and request a _DVE_, this is done as a
 pull request or an issue.  If submitted as a markdown file, add it under
-the year directory and will the full `DVE-YEAR-NUMBER.md` filename.
+the year directory and with the full `DVE-YEAR-NUMBER.md` filename.
 
 ### Format
 The format is Markdown with the following suggested headers, which are not
