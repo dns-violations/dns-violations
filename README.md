@@ -58,9 +58,9 @@ end of the file.
 
 ## Files
 
-<mime-type> (<optional description>): <file within DVE year directory>
-application/dns+dnstap: DVE-YEAR-NUMBER/example.dnstap
-application/dns+dnstap (segfault): DVE-YEAR-NUMBER/example_that_segfaults.dnstap
+<mime-type> (<optional description>): `<file within DVE year directory>`
+application/dns+dnstap: `DVE-YEAR-NUMBER/example.dnstap`
+application/dns+dnstap (segfault): `DVE-YEAR-NUMBER/example_that_segfaults.dnstap`
 
 ## Metadata
 
