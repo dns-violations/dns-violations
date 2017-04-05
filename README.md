@@ -15,7 +15,7 @@ wrong DNS correctly.
 The _List_ is driven by the community for the community, anyone can send in
 a violation and a team of community members will review and accept or reject
 the violation, this team in called _Maintainers_.  Anyone can request to join
-the _Maintainers_ team and <acceptance method TBD>.
+the _Maintainers_ team and \<acceptance method TBD\>.
 
 ## Violation
 An implementation, software and/or system is considered to be in violation
