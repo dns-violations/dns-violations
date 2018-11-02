@@ -1,0 +1,80 @@
+# DVE-2018-0004: fiservapps.com front end load balancer is returning NXDOMAIN for qtype=NS
+
+## Description
+
+billpay.online.firstrepublic.com contains a CNAME that points into the fiservapps.com zone.
+a query for qtype=NS will result in RCODE=3, whereas for qtype=A the result is RCODE=0. this
+causes negative caching for the name, and results in mystery failures in their javascript
+based online bill paying app.
+
+## Evidence
+
+### using 8.8.8.8:
+
+```
+;; ANSWER SECTION:
+billpay.online.firstrepublic.com. 14399 IN CNAME 4713-rxp.fiservapps.com.
+4713-rxp.fiservapps.com. 29 IN A 166.73.11.135 
+```
+
+### using BIND9 (9.11.2):
+
+```
+;; ANSWER SECTION:
+billpay.online.firstrepublic.com. 14400 IN CNAME 4713-rxp.fiservapps.com. 
+```
+
+because:
+
+```
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57717
+;; flags: qr aa rd ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;4713-rxp.fiservapps.com. IN A
+
+;; ANSWER SECTION:
+4713-rxp.fiservapps.com. 30 IN A 166.73.11.135
+
+;; Query time: 44 msec
+;; SERVER: 198.137.62.10#53(198.137.62.10)
+;; WHEN: Fri Nov 02 19:18:54 UTC 2018
+;; MSG SIZE rcvd: 57 
+```
+
+but:
+
+```
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 40782
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;4713-rxp.fiservapps.com. IN NS
+
+;; AUTHORITY SECTION:
+fiservapps.com. 900 IN SOA ns6.onefiserv.com.
+domainmanager.fiserv.com. 544626689 7200 180 1209600 10800
+
+;; Query time: 46 msec
+;; SERVER: 198.137.62.10#53(198.137.62.10)
+;; WHEN: Fri Nov 02 19:18:57 UTC 2018
+;; MSG SIZE rcvd: 112 
+```
+
+## Proposed fix
+
+Upgrade, reconfigure, patch, or replace the faulty DNS load balancer.
+
+## Workaround
+
+Create a fake local authority zone for the affected CNAME target.
+
+## Files
+
+None at the moment.
+
+## Metadata
+
+Tags: load-balancer
